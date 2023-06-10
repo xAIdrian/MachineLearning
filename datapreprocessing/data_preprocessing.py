@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 if __name__ == "__main__":
   # 1. Importing datasets
   # dependent variable is last column: purchased or not
-  users_dataset = pd.read_csv('users.csv')  # creates dataframe
+  users_dataset = pd.read_csv('Users.csv')  # creates dataframe
   X = users_dataset.iloc[: , :-1].values # select all the rows : && all the columns except last one. all columns excluding the last one :-1
   y = users_dataset.iloc[: , -1].values
 
