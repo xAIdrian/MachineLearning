@@ -1,8 +1,13 @@
 
+# Simple Linear Regression
+![Figure_1](https://github.com/ai-akuma/MachineLearning/assets/7444521/fce809a9-1732-4a75-b248-d0284fef0160)
+![test_set](https://github.com/ai-akuma/MachineLearning/assets/7444521/c7aaebd9-210b-42c9-b342-ba8f7e138809)
+
+
 ## Setup and Execution
 We will use PIPENV to manage environment
 
-Certainly! Here's a user guide to help you get started with `pipenv` for managing dependencies in your Python project with multiple modules:
+Here's a user guide to help you get started with `pipenv` for managing dependencies in your Python project with multiple modules:
 
 Step 1: Install pipenv
 If you haven't already, you need to install `pipenv`. Open a command prompt or terminal and run the following command:
