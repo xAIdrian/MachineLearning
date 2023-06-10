@@ -36,6 +36,5 @@ filename.txt
 dir_to_ignore/*
 
 # Ignore file types
-*.csv
 *.txt
 *.log
