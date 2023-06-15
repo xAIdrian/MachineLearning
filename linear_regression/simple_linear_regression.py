@@ -5,36 +5,45 @@ from sklearn.linear_model import LinearRegression
 import datapreprocessing.data_preprocessing_tools as dpt
 
 class SimpleLinearRegression:
-  def __init__(self, dataset_filename, encoding_column_index):
+  def __init__(self, dataset_filename, encoding_column_index=None, start_column_index=None, split_dataset=True):
       # Importing the dataset
-      self.dataset = dpt.PreprocessingTools(dataset_filename)
+      if (start_column_index is not None):
+        self.dataset = dpt.PreprocessingTools(dataset_filename, start_column_index)
+      else:
+        self.dataset = dpt.PreprocessingTools(dataset_filename)
       
       # Preparring the dataset for model
-      self.X = self.apply_oneshot_encoding(encoding_column_index)
-      self.X_train, self.X_test, self.y_train, self.y_test = self.dataset.split_dataset()
+      if (encoding_column_index is not None):
+        self.X = self.apply_oneshot_encoding(encoding_column_index)
+        self.X_train, self.X_test, self.y_train, self.y_test = self.dataset.split_dataset()
       
       # Training the model
-      self.train_regressor()
-      self.regressor_predictions()
+      self.train_regressor(split_dataset)
+      self.regressor_predictions(split_dataset)
       
 
   def apply_oneshot_encoding(self, column_index):
     self.X = self.dataset.encode_dependent_variable(column_index)  
     return self.X  
   
-  def train_regressor(self):
+  def train_regressor(self, split_dataset):
     # training the simple linear regression model on the training set
     # regression is predicting continueous real values
     # classification is predicting categories or classes
     self.regressor = LinearRegression()
-    self.regressor.fit(self.X_train, self.y_train)
+    if (split_dataset):
+      self.regressor.fit(self.X_train, self.y_train)
+    else:
+      self.regressor.fit(self.dataset.X, self.dataset.y)
     return self.regressor
 
-  def regressor_predictions(self):  
+  def regressor_predictions(self, split_dataset):  
     # predicting the test set results
-    # predicted salaries from the num years experience
-    self.y_train_pred = self.regressor.predict(self.X_train)
-    self.y_pred = self.regressor.predict(self.X_test)
+    if (split_dataset):
+      self.y_train_pred = self.regressor.predict(self.X_train)
+      self.y_pred = self.regressor.predict(self.X_test)
+    else:
+      self.y_pred = self.regressor.predict(self.X)
   
   def plot_simple_linear_regression(
     self,    
@@ -57,6 +66,9 @@ class SimpleLinearRegression:
     plt.show()
 
   def plot_simple_linear_regression_training_set(self, title, x_label, y_label):
+    if (self.y_train_pred is None):
+      raise ValueError('y_train_pred is None. Please train the model first.')
+
     self.plot_simple_linear_regression(
       self.X_train,
       self.y_train,

@@ -7,13 +7,22 @@ from sklearn.preprocessing import OneHotEncoder, LabelEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
 
 class PreprocessingTools:
-    def __init__(self, dataset_filename):
+    def __init__(self, dataset_filename, start_column_index=None):
         self.dataset_name = dataset_filename
-        self.X, self.y = self.import_dataset()
+        if (start_column_index is not None):
+            self.X, self.y = self.import_selected_columns_dataset(start_column_index)
+        else:
+            self.X, self.y = self.import_entire_dataset()
     
-    def import_dataset(self):
+    def import_entire_dataset(self):
         dataset = pd.read_csv(self.dataset_name) 
         X = dataset.iloc[: , :-1].values 
+        y = dataset.iloc[: , -1].values
+        return X, y
+    
+    def import_selected_columns_dataset(self, start_column_index):
+        dataset = pd.read_csv(self.dataset_name) 
+        X = dataset.iloc[: , start_column_index: -1].values 
         y = dataset.iloc[: , -1].values
         return X, y
 

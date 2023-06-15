@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-import regression.simple_linear_regression as slr
+import linear_regression.simple_linear_regression as slr
 
 if __name__ == "__main__":
     np.set_printoptions(precision=2)
