@@ -20,4 +20,4 @@ After creating the feature and target arrays, I trained a linear regression mode
 
 Once I built and trained the linear regression model using all available observations, I visualized its performance to interpret the relationship between radio advertising expenditure and sales values. For this visualization, I used `X`, an array of radio values, `y`, an array of sales values, and `predictions`, an array of the model's predicted values for `y` given `X`. The visualization helped in understanding how closely the predictions align with the actual sales values, indicating the effectiveness of radio advertising in influencing sales.
 
-![download (1)](https://github.com/ai-akuma/MachineLearning/assets/7444521/32c73faa-1e66-459e-aa87-376c61d7db1d)
+![download](https://github.com/ai-akuma/MachineLearning/assets/7444521/32c73faa-1e66-459e-aa87-376c61d7db1d)
