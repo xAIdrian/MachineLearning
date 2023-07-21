@@ -38,4 +38,8 @@ Constructed a logistic regression model utilizing all the features available in 
 
 ![download](https://github.com/ai-akuma/MachineLearning/assets/7444521/98b44765-9c71-4af9-b7ab-7da12c40af3a)
 
+After creating a logistic regression model for predicting diabetes status, I plotted the Receiver Operating Characteristic (ROC) curve. The ROC curve is a powerful visualization tool that showcases how the true positive rate and false positive rate change with the decision threshold. Using the test labels (y_test) and the predicted probabilities for the test features to belong to the positive class (y_pred_probs), I was able to generate a ROC curve. This visualization helped interpret the model's performance across different thresholds, aiding in understanding the trade-off between sensitivity and specificity.
+
+In order to enhance the logistic regression model's performance, I employed RandomizedSearchCV, a useful tool for hyperparameter tuning when the hyperparameter space is vast. Unlike GridSearchCV, RandomizedSearchCV only tests a fixed number of hyperparameter settings sampled from specified probability distributions, making it a more computationally efficient option. Using the pre-loaded training and test sets (`X_train`, `X_test`, `y_train`, and `y_test`) from the `diabetes_df` dataset, where the target was "diabetes", I defined a range of hyperparameters for the logistic regression model (`logreg`). Applying RandomizedSearchCV allowed me to identify the optimal hyperparameters among the defined options, thereby refining the model's performance in predicting diabetes status.
+
 
