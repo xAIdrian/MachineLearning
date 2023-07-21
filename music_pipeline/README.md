@@ -58,3 +58,6 @@ Three regression models were built to predict a song's "energy" level using the 
 
 ![download](https://github.com/ai-akuma/MachineLearning/assets/7444521/7c8c9f64-2b24-4ff8-ad55-043d15bc124b)
 
+Added linear regression and ridge regression models, which previously demonstrated similar performance, were selected to assess their predictive capabilities on the test set. The performance metric used was root mean squared error (RMSE). Both models were tested on the pre-scaled training and testing sets, X_train_scaled and X_test_scaled respectively, and compared to the target arrays, y_train and y_test. The models' names and instances were stored in a dictionary for easier access and management during the testing process.
+
+I worked on a classification problem where I transformed the "popularity" column in the music_df dataset into binary values. A value of 1 represented popularity more than or equal to the median for the "popularity" column, while a 0 indicated popularity below the median. I built and visualized the results of three different models - KNeighborsClassifier, DecisionTreeClassifier, and LogisticRegression, to classify whether a song was popular or not. The data was already split, scaled, and preloaded into X_train_scaled, X_test_scaled, y_train, and y_test for this purpose.
