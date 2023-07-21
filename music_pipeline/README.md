@@ -28,8 +28,5 @@ Used Ridge regression, a regularized regression method that introduces a penalty
 
 Applied Lasso regression to the sales_df dataset to uncover feature importance. Lasso regression, another form of regularized linear regression, introduces a penalty equal to the absolute value of the magnitude of coefficients. This can result in some coefficients being shrunk to zero, which essentially excludes insignificant features from the model. After fitting the Lasso model to the feature and target variable arrays, X and y, I plotted the model's coefficients. This allowed me to visually inspect the influence of each feature in predicting the target variable, as represented by the size of its corresponding coefficient. Feature names for the dataset, stored in sales_columns, were used for the plot's x-axis for easy reference.
 
-### Fine Tuning
+![download](https://github.com/ai-akuma/MachineLearning/assets/7444521/5d302cfb-894f-4b8c-92d2-303760901b23)
 
-Worked with the `diabetes_df` dataset, aiming to predict whether individuals are likely to develop diabetes based on features such as Body Mass Index (BMI) and age. This binary classification problem categorized individuals into either having diabetes (1) or not (0). After loading the pandas DataFrame `diabetes_df` and splitting it into `X_train`, `X_test`, `y_train`, and `y_test`, I used a `KNeighborsClassifier()` for the prediction task. Upon fitting the model and making predictions on the test set, I produced a confusion matrix and a classification report to evaluate the performance of the classifier.
-
-Constructed a logistic regression model utilizing all the features available in the `diabetes_df` dataset. The goal of the model was to predict the probability of individuals in the test set being diagnosed with diabetes. The `diabetes_df` dataset was appropriately split into training and test sets, namely `X_train`, `X_test`, `y_train`, and `y_test`, to ensure model validation and accuracy.
