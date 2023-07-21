@@ -56,3 +56,5 @@ Scaled both features and perform grid search cross-validation on the `music_df` 
 
 Three regression models were built to predict a song's "energy" level using the music_df dataset, which included dummy variables for "genre". Feature and target arrays were created and split into training and testing sets (X_train, X_test, y_train, and y_test). Three different types of regression models were employed - Linear Regression, Ridge, and Lasso - and the performance of each was evaluated using cross-validation. The cross_val_score and KFold functions were utilized in the evaluation process, providing insights into how well each model performed.
 
+![download](https://github.com/ai-akuma/MachineLearning/assets/7444521/7c8c9f64-2b24-4ff8-ad55-043d15bc124b)
+
