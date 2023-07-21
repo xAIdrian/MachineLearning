@@ -17,6 +17,7 @@ venv/
 env/
 *.env
 **/env/
+*.csv
 
 # Jupyter Notebook
 .ipynb_checkpoints/
@@ -40,3 +41,5 @@ dir_to_ignore/*
 *.txt
 *.log
 time_series_ml/input/store-sales-time-series-forecasting/train.csv
+*.csv
+*.csv
