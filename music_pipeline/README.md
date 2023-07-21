@@ -64,3 +64,4 @@ I worked on a classification problem where I transformed the "popularity" column
 
 ![download](https://github.com/ai-akuma/MachineLearning/assets/7444521/62cb657b-fbc6-4c90-96f4-199680ff3229)
 
+I built a pipeline to impute missing values, scale features, and conduct hyperparameter tuning of a logistic regression model. The goal was to find the best parameters and accuracy when predicting the song genre. All required models and objects were preloaded to assist in building the pipeline.
