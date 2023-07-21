@@ -30,3 +30,8 @@ Applied Lasso regression to the sales_df dataset to uncover feature importance. 
 
 ![download](https://github.com/ai-akuma/MachineLearning/assets/7444521/5d302cfb-894f-4b8c-92d2-303760901b23)
 
+### Fine Tuning
+
+Worked with the `diabetes_df` dataset, aiming to predict whether individuals are likely to develop diabetes based on features such as Body Mass Index (BMI) and age. This binary classification problem categorized individuals into either having diabetes (1) or not (0). After loading the pandas DataFrame `diabetes_df` and splitting it into `X_train`, `X_test`, `y_train`, and `y_test`, I used a `KNeighborsClassifier()` for the prediction task. Upon fitting the model and making predictions on the test set, I produced a confusion matrix and a classification report to evaluate the performance of the classifier.
+
+Constructed a logistic regression model utilizing all the features available in the `diabetes_df` dataset. The goal of the model was to predict the probability of individuals in the test set being diagnosed with diabetes. The `diabetes_df` dataset was appropriately split into training and test sets, namely `X_train`, `X_test`, `y_train`, and `y_test`, to ensure model validation and accuracy.
