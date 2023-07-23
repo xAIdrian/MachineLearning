@@ -4,6 +4,7 @@ The existing array 'points' from the prior analysis, along with an additional ar
 
 Let's take a closer look at the clustering I performed! I have 'new_points' as an array of points and 'labels' as an array of their cluster labels.
 
+![download](https://github.com/xAIdrian/MachineLearning/assets/7444521/74632aca-5b9e-481d-b01f-ea3d0fc46899)
 
 
 
