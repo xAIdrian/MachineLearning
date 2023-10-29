@@ -17,7 +17,6 @@ venv/
 env/
 *.env
 **/env/
-*.csv
 
 # Jupyter Notebook
 .ipynb_checkpoints/
@@ -40,6 +39,4 @@ dir_to_ignore/*
 # Ignore file types
 *.txt
 *.log
-time_series_ml/input/store-sales-time-series-forecasting/train.csv
-*.csv
-*.csv
+
